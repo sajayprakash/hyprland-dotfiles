@@ -12,7 +12,7 @@ configuration {
 
 * {
     transparent: #00000000;
-    foreground: #F2F2F2EE;
+    foreground: #f5e0dc;
     background-selected: #F2F2F245;
     background-active: #F2F2F230;
     background-white: #F2F2F211;
@@ -24,7 +24,7 @@ configuration {
 window {
     transparency: "real";
     background-color: #1917244D;
-    text-color: #6e6a86;
+    text-color: #f5e0dc;
     location: west;
     anchor: west;
     x-offset: 5px;
@@ -43,7 +43,7 @@ button {
     str: " ";
     font: "FantasqueSansMono Nerd Font 16";
     expand: false;
-    text-color: #6e6a86;
+    text-color: #f5e0dc;
     background-color: @transparent;
     vertical-align: 0.5;
     horizontal-align: 0.5;
@@ -52,7 +52,7 @@ button {
 entry {
     font: "Inter Regular 12";
     background-color: @transparent;
-    text-color: #6e6a86;
+    text-color: #f5e0dc;
     expand: true;
     vertical-align: 0.5;
     horizontal-align: 0;
@@ -129,7 +129,7 @@ element-text {
     expand: true;
     horizontal-align: 0;
     vertical-align: 0.5;
-    color: #6e6a86;
+    color: #f5e0dc;
     background-color: transparent;
 }
 
