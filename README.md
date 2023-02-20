@@ -1,3 +1,5 @@
+![screenshot](https://imgur.com/a/V7hfR80)
+
 ```bash
 
 yay -S --needed hyprland-nvidia-git polkit-kde-agent ffmpeg neovim  \
