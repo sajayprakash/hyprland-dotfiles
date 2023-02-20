@@ -1,4 +1,4 @@
-![screenshot](https://imgur.com/a/V7hfR80)
+![screenshot](https://i.imgur.com/Up7hdYC.png)
 
 ```bash
 
