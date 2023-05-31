@@ -8,41 +8,42 @@
 }
 
 window#waybar {
-    background: rgba(1,1,1,0);
-    color: 	#98971A;
+    background: rgba(21, 18, 27, 0);
+    color: #cdd6f4;
 }
+
 tooltip {
-    background: #282828;
+    background: #1e1e2e;
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    border-color: #D79921;
+    border-color: #11111b;
 }
 
 #workspaces button {
     padding: 5px;
-    color: #458588;
+    color: #313244;
     margin-right: 5px;
 }
 
 #workspaces button.active {
-    color: #689D6A;
+    color: #a6adc8;
 }
 
 #workspaces button.focused {
-    color: #B16286;
-    background: #282828;
+    color: #a6adc8;
+    background: #eba0ac;
     border-radius: 10px;
 }
 
 #workspaces button.urgent {
-    color: #458588;
-    background: #282828;
+    color: #11111b;
+    background: #a6e3a1;
     border-radius: 10px;
 }
 
 #workspaces button:hover {
-    background: #282828;
+    background: #11111b;
     color: #cdd6f4;
     border-radius: 10px;
 }
@@ -50,7 +51,6 @@ tooltip {
 #custom-language,
 #custom-updates,
 #custom-caffeine,
-#custom-weather,
 #window,
 #clock,
 #battery,
@@ -61,10 +61,11 @@ tooltip {
 #backlight,
 #cpu,
 #memory {
-    background: #282828;
+    background: #1e1e2e;
     padding: 0px 10px;
     margin: 3px 0px;
     margin-top: 10px;
+    border: 1px solid #181825;
 }
 
 #tray {
@@ -74,7 +75,7 @@ tooltip {
 }
 
 #workspaces {
-    background: #282828;
+    background: #1e1e2e;
     border-radius: 10px;
     margin-left: 10px;
     padding-right: 0px;
@@ -83,20 +84,20 @@ tooltip {
 }
 
 #custom-caffeine {
-    color: #D79921;
+    color: #89dceb;
     border-radius: 10px 0px 0px 10px;
     border-right: 0px;
     margin-left: 10px;
 }
 
 #custom-language {
-    color: #B16286;
+    color: #f38ba8;
     border-left: 0px;
     border-right: 0px;
 }
 
 #custom-updates {
-    color: #689D6A;
+    color: #f5c2e7;
     border-left: 0px;
     border-right: 0px;
     border-radius: 10px 0px 0px 10px;
@@ -111,7 +112,7 @@ tooltip {
 }
 
 #clock {
-    color: #D65D0E;
+    color: #fab387;
     border-radius: 10px 10px 10px 10px;
     margin-left: 5px;
     border-right: 0px;
@@ -119,20 +120,20 @@ tooltip {
 }
 
 #network {
-    color: #98971A;
+    color: #f9e2af;
     border-left: 0px;
     border-right: 0px;
 }
 
 #pulseaudio {
-    color: #98971A;
+    color: #89b4fa;
     border-left: 0px;
     border-right: 0px;
     border: 1px;
 }
 
 #pulseaudio.microphone {
-    color: #D79921;
+    color: #cba6f7;
     border: 1px;
     border-left: 0px;
     border-right: 0px;
@@ -140,25 +141,18 @@ tooltip {
 }
 
 #battery {
-    color: #A89984;
+    color: #a6e3a1;
     border-radius: 0 10px 10px 0;
     margin-right: 10px;
     border-left: 0px;
 }
 
-#custom-weather {
-    border-radius: 0px 10px 10px 0px;
-    border-right: 0px;
-    margin-left: 0px;
-    border: 1px;
-}
-
 #memory {
-    color: #98971A;
+    color: #67b48e;
     border: 1px;
 }
 
 #cpu {
-    color: #98971A;
+    color: #67b48e;
     border: 1px
 }
