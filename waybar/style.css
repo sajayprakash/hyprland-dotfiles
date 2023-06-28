@@ -16,30 +16,32 @@ window#waybar {
 }
 
 #workspaces {
-  background: rgba(0, 43, 55, 0.8);
-  margin: 5px 5px 5px 5px;
-  padding: 0px 5px 0px 5px;
+  background-color: rgba (0,54,66,0.9);
+  margin: 5px;
+  padding: 5px;
+  border: dotted 1px rgb(129, 147, 150);
   border-radius: 8px;
-  border: solid 1px rgb(129, 147, 150);
   font-weight: normal;
   font-style: normal;
 }
 
 #workspaces button {
+  background-color: rgba (0,54,66,0.9);
   padding: 0px 5px;
-  border-radius: 16px;
+  border-radius: 8px;
   color: rgb(129, 147, 150);
 }
 
 #workspaces button.active {
+  border: solid 1px rgb(129, 147, 150);
   background-color: rgba (0,54,66,0.9);
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 #workspaces button:hover {
   background-color: transparent;
   color: rgb(0,142,212);
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 #clock,
