@@ -1,0 +1,99 @@
+{
+    // "layer": "top", // Waybar at top layer
+
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+
+    "height": 36, // Waybar height (to be removed for auto height)
+
+    // "width": 1280, // Waybar width
+
+    "spacing": 4, // Gaps between modules (4px)
+
+    // Choose the order of the modules
+    "modules-left": ["custom/launcher", "wlr/workspaces"],
+    "modules-center": [ "clock" ],
+    "modules-right": ["pulseaudio",  "cpu", "memory", "network","tray"],
+
+    // Modules configuration
+    "wlr/workspaces": {
+        "active-only": false,
+        "all-outputs": true,
+        "disable-scroll": false,
+        "on-scroll-up": "hyprctl dispatch workspace -1",
+        "on-scroll-down": "hyprctl dispatch workspace +1",
+		"format": "{icon}",
+		"on-click": "activate",
+		"format-icons": {
+			"1": "一",
+			"2": "二",
+			"3": "三",
+			"4": "四",
+			"5": "五",
+			"6": "六",
+			"7": "七",
+			"8": "八",
+			"9": "九",
+			"10": "十",
+//		"urgent": "",
+//		"active": "",
+//		"default": "󰧞",
+    "sort-by-number": true
+    },
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 5
+    },
+
+    "clock": {
+        //"timezone": "/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "{}% "
+    },
+
+    "network": {
+    	"format-wifi": "󰤨",
+    	"format-ethernet": " {ifname}",
+    	"format-linked": " {ifname} (No IP)",
+    	"format-disconnected": "󰤭",
+    	"format-alt": " {ifname}: {ipaddr}/{cidr}",
+      "tooltip-format": "{essid}",
+      "on-click-right": "nmtui"
+    },
+
+    "pulseaudio": {
+        "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "custom/launcher": {
+    	"format": "禅",
+        "on-click": "wofi --show drun",
+    },
+}
+
