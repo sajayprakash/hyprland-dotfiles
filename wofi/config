@@ -1,0 +1,6 @@
+# Sajay's Wofi config
+
+mode=drun
+allow_images=true
+image_size=24
+width=25%

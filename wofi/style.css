@@ -1,0 +1,49 @@
+/*
+ * Sajay's Wofi Config
+ * This is using the solarized dark theme
+ *
+*/
+
+* {
+	border-radius: 5px;
+	border: none;
+}
+window {
+	font-size:18px;
+	font-family: "Monospace";
+	margin: 0px;
+  	border: 1px solid rgba(129,147,150,0.9);
+	background-color: rgba(0,43,55,0.8);
+	color: rgb(129,147,150);
+}
+
+#entry {
+	padding: 0.25em;
+}
+
+#entry:selected {
+	background-color: rgba (0,54,66,0.9);
+}
+
+#text:selected {
+	color: rgb(0,142,212);
+}
+
+#text {
+	margin:.25em;
+}
+
+#input {
+	background-color: rgba(0,43,55,0.5);
+	color: rgb(129,147,150);
+	padding: 0.25em;
+}
+
+#inner-box, #outer-box {
+  	margin: 5px;
+}
+
+#img {
+	margin-left: .25em;
+	margin-right: .25em;
+}
