@@ -1,0 +1,5 @@
+# Ignore all files in ~/.config/fish except config.fish
+fish/*
+
+!fish/config.fish
+
