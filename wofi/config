@@ -1,6 +1,9 @@
 # Sajay's Wofi config
 
-mode=drun
-allow_images=true
-image_size=24
-width=25%
+width=500
+height=250
+insensitive=true
+mode=drun,run
+columns=1
+padding:5
+lines=6
