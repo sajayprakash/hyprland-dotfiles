@@ -4,6 +4,33 @@
     "modules-left": ["wlr/workspaces"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["network", "cpu", "memory", "battery", "clock", "tray"],
+
+    "wlr/workspaces": {
+            "active-only": false,
+            "all-outputs": true,
+            "disable-scroll": false,
+            "on-scroll-up": "hyprctl dispatch workspace -1",
+            "on-scroll-down": "hyprctl dispatch workspace +1",
+    		            "format": "{icon}",
+    		            "on-click": "activate",
+    		            "format-icons": {
+    		            	"1": "一",
+    		            	"2": "二",
+    		            	"3": "三",
+    		            	"4": "四",
+    		            	"5": "五",
+    		            	"6": "六",
+    		            	"7": "七",
+    		            	"8": "八",
+    		            	"9": "九",
+    		            	"10": "十",
+//	            	"urgent": "",
+//	            	"active": "",
+//	            	"default": "󰧞",
+        "sort-by-number": true
+        },
+    },
+
     "tray": {
         // "icon-size": 21,
         "spacing": 10
