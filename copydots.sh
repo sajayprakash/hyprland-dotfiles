@@ -12,6 +12,7 @@ directories=(
     ~/.config/paru
     ~/.config/wallpapers
     ~/.config/fish/
+    ~/.config/cava/
 )
 
 # Loop through each directory
