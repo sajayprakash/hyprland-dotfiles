@@ -4,15 +4,15 @@
 directories=(
     ~/.config/mako
     ~/.config/wofi
-    ~/.config/hypr
+    ~/.config/waybar
     ~/.config/hypr
     ~/.config/firefox
     ~/.config/foot
     ~/.config/git
     ~/.config/paru
     ~/.config/wallpapers
-    ~/.config/fish/
-    ~/.config/cava/
+    ~/.config/fish
+    ~/.config/cava
 )
 
 # Loop through each directory
