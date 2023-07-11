@@ -1,99 +1,48 @@
 {
-    // "layer": "top", // Waybar at top layer
-
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-
-    "height": 36, // Waybar height (to be removed for auto height)
-
-    // "width": 1280, // Waybar width
-
-    "spacing": 4, // Gaps between modules (4px)
-
-    // Choose the order of the modules
-    "modules-left": ["custom/launcher", "wlr/workspaces"],
-    "modules-center": [ "clock" ],
-    "modules-right": ["pulseaudio",  "cpu", "memory", "network","tray"],
-
-    // Modules configuration
-    "wlr/workspaces": {
-        "active-only": false,
-        "all-outputs": true,
-        "disable-scroll": false,
-        "on-scroll-up": "hyprctl dispatch workspace -1",
-        "on-scroll-down": "hyprctl dispatch workspace +1",
-		"format": "{icon}",
-		"on-click": "activate",
-		"format-icons": {
-			"1": "一",
-			"2": "二",
-			"3": "三",
-			"4": "四",
-			"5": "五",
-			"6": "六",
-			"7": "七",
-			"8": "八",
-			"9": "九",
-			"10": "十",
-//		"urgent": "",
-//		"active": "",
-//		"default": "󰧞",
-    "sort-by-number": true
-    },
-    },
-
+    //"height": , // Waybar height (to be removed for auto height)
+    "position": "top",
+    "modules-left": ["wlr/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["network", "cpu", "memory", "battery", "clock", "tray"],
     "tray": {
-        "icon-size": 16,
-        "spacing": 5
+        // "icon-size": 21,
+        "spacing": 10
     },
-
     "clock": {
-        //"timezone": "/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%H:%M:%S}",
+        "format-alt": "{:%d.%m.%Y}",
+        "interval": 1
     },
-
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
-    },
-
-    "memory": {
-        "format": "{}% "
-    },
-
-    "network": {
-    	"format-wifi": "󰤨",
-    	"format-ethernet": " {ifname}",
-    	"format-linked": " {ifname} (No IP)",
-    	"format-disconnected": "󰤭",
-    	"format-alt": " {ifname}: {ipaddr}/{cidr}",
-      "tooltip-format": "{essid}",
-      "on-click-right": "nmtui"
-    },
-
     "pulseaudio": {
-        "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
+        "scroll-step": 1,
+        "format": "Vol: {volume}%",
+        "format-bluetooth": "Vol: {volume}% ",
+        "format-bluetooth-muted": "Vol: {icon}",
+        "format-muted": "Vol: {volume}%",
         "on-click": "pavucontrol"
     },
-
-    "custom/launcher": {
-    	"format": "禅",
-        "on-click": "wofi --show drun",
+    "cpu": {
+        "format": "CPU: {usage}%",
+        "interval": 1
+    },
+    "memory": {
+        "format": "RAM: {}%",
+        "interval": 1
+    },
+    "temperature": {
+        "format": "{temperatureC}°C",
+        "interval": 1
+    },
+    "battery": {
+        "format": "Bat: {capacity}%",
+        "format-charging": "Bat: {capacity}% (charging)",
+        "format-plugged": "Bat: {capacity}% (plugged)",
+        "interval": 10
+    },
+    "network": {
+        "format": "Network: {ifname}",
+        "tooltip-format": "{ipaddr}/{cidr}",
+        "format-linked": "Network (No IP) via {ifname}",
+        "format-disconnected": "No network",
     },
 }
-
