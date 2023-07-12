@@ -1,96 +1,128 @@
+@import "./colors/mocha.css";
+
+/* margin: top right bottom left */
+/* Spacing outside the element */
+
+/* padding: top right bottom left */
+/* Spacing inside the element */
+
 * {
-    font-family: JetBrains Mono Nerd Font;
-    font-size: 10pt;
-    border: none;
-    font-weight: 400;
-    padding: 1px 1px;
+  font-family: JetBrains Mono Nerd Font;
+  font-size: 10px;
 }
 
 window#waybar {
-    background-color: #001217;
-    opacity: 0.8;
-    color: #839496;
-    padding-right: 5px;
+  background-color: @crust;
+  color: @text;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  border-radius: 0px;
+  transition-duration: .5s;
+  margin: 16px 16px;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
 }
 
 #workspaces button {
-    background-color: transparent;
-    border-radius: 2px;
-    color: #839496;
-    margin: 2px 2px;
+  color: @text;
+  background: @background3;
+  border-radius: 8px;
+  padding: 0px 10px 0px 10px;
+  margin: 7px 5px 10px 5px;
+  border: 1px solid @border;
 }
 
 #workspaces button:hover {
-    color: #cb4b16;
-    background-color: #001217;
+  background: @surface0;
+  color: @text;
 }
 
-#workspaces button.focused {
-    color: #b58900;
-    background-color: #001217;
+#workspaces button.active {
+  color: @crust;
+  background: @overlay2;
+  border: none; 
 }
 
-#workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-#mode {
-    background-color: #888888;
-}
+#custom-launcher,
 #clock,
 #battery,
 #cpu,
-#memory,
-#disk,
 #temperature,
 #backlight,
 #network,
 #pulseaudio,
-#custom-media,
-#tray,
-#mode,
-#mpd {
-    padding: 0 4px;
-    color: #b58900;
-    background-color: #001217;
-    border-radius: 2px;
-    margin: 2px 2px;
+#memory,
+#custom-dunst,
+#custom-powermenu{
+  padding: 0px 20px;
+  margin: 7px 0px 10px 0px;
+	border-radius: 8px;
+  color: @crust;
 }
 
-#window {
-    color: #859900;
-    font-weight: 800;
+#window,
+
+#custom-launcher {
+  padding: 0px 25px 0px 20px;
+  margin: 7px 0px 10px 20px;
+  background-color: @mauve;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+#cpu {
+  background-color: @lavender;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+#temperature{
+  background-color: @blue;
+}
+
+#memory {
+  background-color: @sapphire;
+}
+
+#custom-dunst {
+  padding: 0px 20px 0px 13px;
+  background-color: @sky;
+}
+
+#pulseaudio {
+  padding: 0px 20px 0px 17px;
+  background-color: @teal;
+}
+
+#network {
+  padding: 0px 15px 0px 20px;
+  background-color: @green;
+}
+
+#battery {
+  background-color: @yellow;
+}
+
+#clock {
+  background-color: @peach;
+}
+
+#custom-powermenu {
+  padding: 0px 25px 0px 20px;
+  margin: 7px 20px 10px 0px;
+  background-color: @maroon;
 }
 
 @keyframes blink {
-    to {
-        background-color: #888888;
-        color: #000000;
-    }
+  to {
+    background-color: rgba(30, 34, 42, 0.5);
+    color: #abb2bf;
+  }
 }
 
 #battery.critical:not(.charging) {
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-label:focus {
-    background-color: #000000;
-}
-
-#language {
-    padding: 0 4px;
-    min-width: 16px;
-}
-
+  color: #f53c3c;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+} label:focus { background-color: #000000; }

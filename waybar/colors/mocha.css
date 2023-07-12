@@ -1,3 +1,10 @@
+/*
+*
+* Catppuccin Mocha palette
+* Maintainer: rubyowo
+*
+*/
+
 @define-color base   #1e1e2e;
 @define-color mantle #181825;
 @define-color crust  #11111b;
@@ -28,58 +35,3 @@
 @define-color pink      #f5c2e7;
 @define-color flamingo  #f2cdcd;
 @define-color rosewater #f5e0dc;
-
-
-* {
-    font-family: JetBrains Mono Nerd Font;
-    font-size: 17px;
-    border-radius: 15px;
-}
-
-window {
-    margin: 5px;
-    background-color: @crust;
-    border: 3px solid @sky;
-    border-radius: 15px;
-}
-
-#outer-box {
-    margin: 4px;
-    border-radius: 15px;
-}
-
-#input {
-    margin: 10px 10px 20px 10px;
-    background-color: @mantle;
-    color: @subtext1;
-    border-radius: 8px;
-    padding: 5px;
-    border: 1px solid @subtext1; 
-}
-
-#inner-box {
-    margin: 0px 10px 50px 10px;
-    border-radius: 0px;
-    background-color: @crust;
-}
-
-#scroll {
-    margin: 0px 0px;
-    border-radius: 8px;
-    border: none;
-}
-
-#text {
-    margin: 2px;
-}
-
-#entry {
-    border: none;
-    border-radius: 8px;
-}
-
-
-#entry:selected {
-    color: @crust;
-    background-color: @teal;
-}
